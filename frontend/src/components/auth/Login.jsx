@@ -1,5 +1,5 @@
 import { setLoading, setUser } from "@/redux/authSlice";
-import { USER_API_END_POINT } from "@/utils/constants";
+// import { USER_API_END_POINT } from "@/utils/constants";
 import axios from "axios";
 import { Loader2 } from "lucide-react";
 import React, { useEffect, useState } from "react";
@@ -30,7 +30,7 @@ const Login = () => {
 
         try {
             dispatch(setLoading(true));
-            const res = await axios.post(`${USER_API_END_POINT}/login`, formData, {
+            const res = await axios.post(`${import.meta.env.VITE_USER_API_END_POINT}/login`, formData, {
                 headers: {
                     "Content-Type": "application/json",
                 },

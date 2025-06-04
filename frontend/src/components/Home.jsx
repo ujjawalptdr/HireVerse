@@ -10,7 +10,6 @@ import { motion } from "framer-motion";
 
 const Home = () => {
   useGetAllJobs();
-
   const { user } = useSelector(store => store.auth);
   const navigate = useNavigate();
   useEffect(() => {
@@ -18,6 +17,7 @@ const Home = () => {
       navigate("/admin/companies");
     }
   }, [])
+
 
   return (
     <div className="relative overflow-hidden">
@@ -36,7 +36,6 @@ const Home = () => {
         transition={{ duration: 1, delay: 0.4 }}
         className="absolute top-[570px] -right-20 z-10 w-60 h-60 md:w-80 md:h-80 bg-purple-400 rounded-full "
       />
-
       <Navbar />
       <HeroSection />
       <LatestJobs />

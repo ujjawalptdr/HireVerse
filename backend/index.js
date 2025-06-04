@@ -21,7 +21,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 //For allowing the request from FrontEnd
 const corsOptions = {
-  origin: "http://localhost:5173",
+  origin: "https://hireverse.onrender.com",
   credentials: true,
 };
 

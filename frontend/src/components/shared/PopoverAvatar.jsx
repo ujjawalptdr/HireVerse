@@ -6,7 +6,7 @@ import { LogOut, User2 } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "sonner";
 import axios from "axios";
-import { USER_API_END_POINT } from "@/utils/constants";
+// import { USER_API_END_POINT } from "@/utils/constants";
 import { useDispatch, useSelector } from "react-redux";
 import { setUser } from "@/redux/authSlice";
 import emptyProfileImage from "../../assets/Empty-Profile-Pic.webp"
@@ -19,7 +19,7 @@ const PopoverAvatar = () => {
 
     const logoutHandler = async () => {
         try {
-            const response = await axios.get(`${USER_API_END_POINT}/logout`, { withCredentials: true });
+            const response = await axios.get(`${import.meta.env.VITE_USER_API_END_POINT}/logout`, { withCredentials: true });
             if (response.data.success) {
                 dispatch(setUser(null))
                 navigate("/");

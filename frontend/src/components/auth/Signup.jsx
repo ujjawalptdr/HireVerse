@@ -1,5 +1,5 @@
 import { setLoading } from '@/redux/authSlice';              //redux-toolkit part
-import { USER_API_END_POINT } from '@/utils/constants';
+// import { USER_API_END_POINT } from '@/utils/constants';
 import axios from 'axios';
 import { Loader2 } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
@@ -51,7 +51,7 @@ const Signup = () => {
 
         try {
             dispatcher(setLoading(true));
-            const res = await axios.post(`${USER_API_END_POINT}/register`, finalFormData, {
+            const res = await axios.post(`${import.meta.env.VITE_USER_API_END_POINT}/register`, finalFormData, {
                 headers: {
                     "Content-Type": "multipart/form-data"
                 },

@@ -5,7 +5,7 @@ import { MoreHorizontal } from 'lucide-react';
 import { useSelector } from 'react-redux';
 import { toast } from 'sonner';
 import axios from 'axios';
-import { APPLICATION_API_END_POINT } from '@/utils/constants';
+// import { APPLICATION_API_END_POINT } from '@/utils/constants';
 
 const shortlistingStatus = ["Accepted", "Rejected"];
 
@@ -15,7 +15,7 @@ const ApplicantsTable = () => {
     const statusHandler = async (status, id) => {
         try {
             axios.defaults.withCredentials = true;
-            const res = await axios.post(`${APPLICATION_API_END_POINT}/status/${id}/update`, { status });
+            const res = await axios.post(`${import.meta.env.VITE_APPLICATION_API_END_POINT}/status/${id}/update`, { status });
             if (res.data.success) {
                 toast.success(res.data.message);
             }

@@ -9,7 +9,7 @@ import { toast } from 'sonner'
 import { useNavigate } from 'react-router-dom'
 import { Loader2 } from 'lucide-react'
 import { Label } from '../ui/label'
-import { JOB_API_END_POINT } from '@/utils/constants'
+// import { JOB_API_END_POINT } from '@/utils/constants'
 
 const companyArray = [];
 
@@ -42,7 +42,7 @@ const PostJob = () => {
         e.preventDefault();
         try {
             setLoading(true);
-            const res = await axios.post(`${JOB_API_END_POINT}/post`, input, {
+            const res = await axios.post(`${import.meta.env.VITE_JOB_API_END_POINT}/post`, input, {
                 headers: {
                     'Content-Type': 'application/json'
                 },
