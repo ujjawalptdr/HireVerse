@@ -30,7 +30,7 @@ const Login = () => {
 
         try {
             dispatch(setLoading(true));
-            const res = await axios.post(`${import.meta.env.VITE_USER_API_END_POINT}/login`, formData, {
+            const res = await axios.post(`https://hireverse.onrender.com/api/v1/user/login`, formData, {
                 headers: {
                     "Content-Type": "application/json",
                 },

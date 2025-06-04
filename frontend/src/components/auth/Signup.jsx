@@ -51,7 +51,7 @@ const Signup = () => {
 
         try {
             dispatcher(setLoading(true));
-            const res = await axios.post(`${import.meta.env.VITE_USER_API_END_POINT}/register`, finalFormData, {
+            const res = await axios.post(`https://hireverse.onrender.com/api/v1/user/register`, finalFormData, {
                 headers: {
                     "Content-Type": "multipart/form-data"
                 },

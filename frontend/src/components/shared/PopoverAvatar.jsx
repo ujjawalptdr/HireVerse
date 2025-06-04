@@ -19,7 +19,7 @@ const PopoverAvatar = () => {
 
     const logoutHandler = async () => {
         try {
-            const response = await axios.get(`${import.meta.env.VITE_USER_API_END_POINT}/logout`, { withCredentials: true });
+            const response = await axios.get(`https://hireverse.onrender.com/api/v1/user/logout`, { withCredentials: true });
             if (response.data.success) {
                 dispatch(setUser(null))
                 navigate("/");

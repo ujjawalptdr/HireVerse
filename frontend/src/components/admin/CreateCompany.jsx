@@ -16,7 +16,7 @@ const CreateCompany = () => {
     const dispatch = useDispatch();
     const registerNewCompany = async () => {
         try {
-            const res = await axios.post(`${import.meta.env.VITE_COMPANY_API_END_POINT}/register`, { companyName }, {
+            const res = await axios.post(`https://hireverse.onrender.com/api/v1/company/register`, { companyName }, {
                 headers: {
                     'Content-Type': 'application/json'
                 },

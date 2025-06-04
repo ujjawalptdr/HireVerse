@@ -9,7 +9,7 @@ export const useGetSingleJob = () => {
     useEffect(() => {
         const fetchSingleJob = async () => {
             try {
-                const res = await axios.get(`${import.meta.env.VITE_JOB_API_END_POINT}/get`, { withCredentials: true });
+                const res = await axios.get(`https://hireverse.onrender.com/api/v1/job/get`, { withCredentials: true });
                 if (res.data.success) {
                     dispatch(setAllJobs(res.data.jobs));
                 }

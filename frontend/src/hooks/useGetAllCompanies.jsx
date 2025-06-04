@@ -9,7 +9,7 @@ export const useGetAllCompanies = () => {
     useEffect(() => {
         const fetchAllCompanies = async () => {
             try {
-                const res = await axios.get(`${import.meta.env.VITE_COMPANY_API_END_POINT}/get`, { withCredentials: true });
+                const res = await axios.get(`https://hireverse.onrender.com/api/v1/company/get`, { withCredentials: true });
                 if (res.data.success) {
                     dispatch(setCompanies(res.data.companies));
                 }

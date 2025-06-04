@@ -9,7 +9,7 @@ export const useGetAllAdminJobs = () => {
     useEffect(() => {
         const fetchAllAdminJobs = async () => {
             try {
-                const res = await axios.get(`${import.meta.env.VITE_JOB_API_END_POINT}/getadminjobs`, { withCredentials: true });
+                const res = await axios.get(`https://hireverse.onrender.com/api/v1/job/getadminjobs`, { withCredentials: true });
                 if (res.data.success) {
                     dispatch(setAllAdminJobs(res.data.jobs));
                 }
