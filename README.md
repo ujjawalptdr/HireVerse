@@ -6,6 +6,10 @@ It delivers a smooth, secure, and modern user experience powered by **React.js**
 
 ---
 
+# 🌐 Live Demo – Job Portal Platform
+https://hireverse.onrender.com/
+
+---
 ### 🧑‍💻 Tech Highlights
 - ⚛️ **Frontend:** React.js with React Router, Redux Toolkit, and Axios for API communication.
 - 🧩 **State Management:** Redux ensures predictable, global state handling across authentication, profiles, jobs, and applications.
